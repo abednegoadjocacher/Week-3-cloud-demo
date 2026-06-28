@@ -20,4 +20,4 @@ jobs:
           aws-region: us-west-1  # change to your region
 
       - name: Deploy to S3
-        run: aws s3 sync . s3://${{ secrets.S3_BUCKET_ENDPOINT_URLID }} --delete --exclude ".git/*" --exclude ".github/*" --exclude "*.md"
+        run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --delete --exclude ".git/*" --exclude ".github/*" --exclude "*.md"
